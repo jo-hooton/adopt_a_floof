@@ -1,5 +1,5 @@
 class Pet < ApplicationRecord
     has_many :comments
-    has_many :wishlists
     belongs_to :user
+    has_many :wishlists
 end

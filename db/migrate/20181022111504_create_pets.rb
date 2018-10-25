@@ -12,6 +12,7 @@ class CreatePets < ActiveRecord::Migration[5.2]
       t.boolean :adopted
       t.string :img_url
       t.integer :user_id
+      t.integer :wishlist_id
 
       t.timestamps
     end

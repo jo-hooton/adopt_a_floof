@@ -1,4 +1,4 @@
 class Wishlist < ApplicationRecord
     belongs_to :user
-    has_many :pets, through: :user
+    has_many :pets
 end

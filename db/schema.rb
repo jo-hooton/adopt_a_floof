@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_10_22_111852) do
+ActiveRecord::Schema.define(version: 2018_10_25_094839) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2018_10_22_111852) do
     t.boolean "adopted"
     t.string "img_url"
     t.integer "user_id"
+    t.integer "wishlist_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -47,6 +48,7 @@ ActiveRecord::Schema.define(version: 2018_10_22_111852) do
   end
 
   create_table "wishlists", force: :cascade do |t|
+    t.integer "pet_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
